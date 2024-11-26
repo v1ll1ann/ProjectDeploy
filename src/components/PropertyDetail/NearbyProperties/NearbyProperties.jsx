@@ -10,7 +10,7 @@ function NearbyProperties({ propertyType }) {
   const { id: currentPropertyId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost/backend/get-nearby-properties.php?type=${propertyType}`)
+    fetch(`https://successful-victory-production-587d.up.railway.app/get-nearby-properties.php?type=${propertyType}`)
       .then(response => response.json())
       .then(data => {
         const filteredProperties = data.filter(property => property.PR_ID !== parseInt(currentPropertyId));

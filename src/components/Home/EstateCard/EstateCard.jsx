@@ -8,7 +8,7 @@ function EstateCard() {
   const propertiesPerPage = 4;
 
   useEffect(() => {
-    fetch('http://localhost/backend/get-image.php')
+    fetch('https://successful-victory-production-587d.up.railway.app/get-image.php')
       .then(response => response.json())
       .then(data => {
         console.log(data);

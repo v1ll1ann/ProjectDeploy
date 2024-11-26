@@ -10,7 +10,7 @@ export default function Manage() {
 
   // Fetch properties from the database
   useEffect(() => {
-    fetch('http://localhost/backend/get_properties_admin.php')
+    fetch('https://successful-victory-production-587d.up.railway.app/get_properties_admin.php')
     .then(response => response.json())
     .then(data => {
       console.log(data);

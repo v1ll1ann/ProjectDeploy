@@ -13,7 +13,7 @@ export default function SearchResult() {
     const searchQuery = new URLSearchParams(window.location.search).get('query');
     console.log("Search query:", searchQuery);
 
-    fetch(`http://localhost/backend/search.php?query=${searchQuery}`)
+    fetch(`https://successful-victory-production-587d.up.railway.app/search.php?query=${searchQuery}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

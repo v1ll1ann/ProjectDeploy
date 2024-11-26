@@ -42,7 +42,7 @@ const LoginRegister = ({ setUser }) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost/backend/login.php', {
+    fetch('https://successful-victory-production-587d.up.railway.app/login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

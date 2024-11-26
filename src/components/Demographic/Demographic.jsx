@@ -66,7 +66,7 @@ function DemographicForm() {
     };
 
     try {
-      const response = await axios.post('http://localhost/backend/property_filter.php', formData, {
+      const response = await axios.post('https://successful-victory-production-587d.up.railway.app/property_filter.php', formData, {
         headers: { 'Content-Type': 'application/json' },
       });
       setResults(response.data.data || []);

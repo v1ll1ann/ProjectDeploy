@@ -18,7 +18,7 @@ const Admin = ({ setUser }) => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost/backend/admin.php', {
+    fetch('https://successful-victory-production-587d.up.railway.app/admin.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

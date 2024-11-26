@@ -8,7 +8,7 @@ function ShowAllResult() {
 
   useEffect(() => {
     // Fetch all properties from backend
-    fetch('http://localhost/backend/get-all-properties.php')
+    fetch('https://successful-victory-production-587d.up.railway.app/get-all-properties.php')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

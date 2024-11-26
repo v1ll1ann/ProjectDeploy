@@ -21,7 +21,7 @@ function PropertyDetail({ user }) {
     }
 
     // Fetch property details
-    fetch(`http://localhost/backend/get-property-detail.php?id=${id}`)
+    fetch(`https://successful-victory-production-587d.up.railway.app/get-property-detail.php?id=${id}`)
       .then(response => response.json())
       .then(data => {
         console.log('Property Detail Data:', data);
