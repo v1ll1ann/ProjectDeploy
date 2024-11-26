@@ -74,7 +74,7 @@ const LoginRegister = ({ setUser }) => {
       return;
     }
   
-    fetch('http://localhost/backend/register.php', {
+    fetch('https://successful-victory-production-587d.up.railway.app/register.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -118,7 +118,7 @@ const LoginRegister = ({ setUser }) => {
       return;
     }
 
-    fetch('http://localhost/backend/forgot_password.php', {
+    fetch('https://successful-victory-production-587d.up.railway.app/forgot_password.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
