@@ -16,24 +16,23 @@ export default function SearchResult() {
     fetch(`https://successful-victory-production-587d.up.railway.app/search.php?query=${searchQuery}`)
       .then(response => {
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
         return response.json();
       })
       .then(data => {
-        if (data.properties && data.properties.length > 0) {
-          setProperties(data.properties);
-        } else {
-          setError('No properties found');
+        if (data.error) {
+          throw new Error(data.error);
         }
+        setProperties(data.properties || []);
         setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching data:', error);
-        setError('Error fetching data');
+        console.error('Fetch error:', error.message);
+        setError(error.message);
         setLoading(false);
       });
-  }, []);
+}, []);
 
   const nextPage = () => {
     setCurrentPage((prevPage) => (prevPage + 1) % Math.ceil(properties.length / propertiesPerPage));
