@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.LoginRegister {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(./assets/housebackground.jpg) no-repeat; */
+    background: url(./assets/town-background.jpg) no-repeat;
+    /* background: url() no-repeat;  */
+    background-size: cover;
+    background-position: center;
+}
+
+.Admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(./assets/housebackground.jpg) no-repeat; */
+    background: url(./assets/town-background.jpg) no-repeat;
+    /* background: url() no-repeat;  */
+    background-size: cover;
+    background-position: center;
+}
+
+.Demographic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(./assets/housebackground.jpg) no-repeat; */
+    background: url(./assets/town-background.jpg) no-repeat;
+    /* background: url() no-repeat;  */
+    background-size: cover;
+    background-position: center;
+}
+
+.History {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: url(./assets/housebackground.jpg) no-repeat; */
+    background: url(./assets/town-background.jpg) no-repeat;
+    /* background: url() no-repeat;  */
+    background-size: cover;
+    background-position: center;
+}
+
+.property-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.property-content img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+

@@ -1,0 +1,109 @@
+.estate-card-container {
+  max-width: 100%; /* Ensures the container takes up the full width of the parent */
+  padding: 0 10px; /* Adds minimal padding */
+  /* margin-top: -550px; Center the container */
+}
+.estate-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Keeps the gap between cards */
+  justify-content: space-between; /* Distributes cards evenly across the row */
+  max-width: 1200px; /* Optional: set a max width to limit the content width */
+  margin: 0 auto; /* Center the content within the container */
+  margin-top: -1000;
+
+}
+  
+  .estate-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px; /* กว้างที่แน่นอนของการ์ด */
+    height: 430px; /* ความสูงที่แน่นอนของการ์ด */
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  
+  .estate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .estate-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .estate-card-info {
+    text-align: center;
+    flex-grow: 1; 
+  }
+  
+  .estate-card-price {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .estate-card-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .estate-card-location {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .estate-card-location-border {
+    border: 1px solid rgb(24, 38, 167);
+    background-color: rgb(24, 38, 167);
+    color:#ddd;
+    border-radius: 5px;
+    padding: 2px 5px;
+    display: inline-block; 
+  }
+  
+  .estate-card-size {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .espagination {
+    text-align: center;
+    margin-top: 20px;
+    /* background-color: aqua; */
+  }
+  
+  .espagination button {
+    background-color: #b51b1b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .espagination-dot {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .espagination-dot.active {
+    background: #000;
+  }
+  

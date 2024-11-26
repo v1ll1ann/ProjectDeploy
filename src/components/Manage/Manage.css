@@ -1,0 +1,51 @@
+.manage-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.property-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.property-table th, .property-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.property-table img {
+  width: 100px;
+  height: 100px;
+}
+
+.edit-btn {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.edit-popup, .delete-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+}

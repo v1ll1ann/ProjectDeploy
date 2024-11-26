@@ -1,0 +1,66 @@
+/* Container for the properties and pagination */
+.show-all-result-container {
+    /* background-color: aqua; */
+    max-width: 1200px;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Styling the property list to align cards */
+  .property-list {
+    /* background-color: antiquewhite; */
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .property-card {
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Individual property card styling */
+/* Pagination styling */
+.pagination {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.pagination button,
+.pagination-ellipsis,
+.pagination-number {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  color: #555;
+}
+
+.pagination-number.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.pagination-ellipsis {
+  cursor: default;
+  color: #999;
+}
+
+.pagination button:hover,
+.pagination-number:hover {
+  color: #000;
+}
+
+.estate-card-location-border {
+  border: 1px solid rgb(24, 38, 167);
+  background-color: rgb(24, 38, 167);
+  color:#ddd;
+  border-radius: 5px;
+  padding: 2px 5px;
+  display: inline-block; 
+}

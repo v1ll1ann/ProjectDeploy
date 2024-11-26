@@ -1,0 +1,193 @@
+.Demographic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Adjust height based on the navbar's height */
+  width: 100vw;
+  overflow: hidden;
+  background: url('../../assets/town-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for .dmcontent to fit within .Demographic */
+.dmcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(241, 241, 241);
+  width: 90%;
+  max-width: 1000px; /* Set maximum width for general screens */
+  max-height: 100%; /* Ensure it doesn’t overflow the parent container */
+  padding: 30px;
+  border-radius: 10px;
+  border: 10px solid rgb(24, 38, 167);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+.dmheader {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(146, 135, 51);
+}
+
+.dmtitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #e8d955;
+  background-color: rgb(24, 38, 167);
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.property-selection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.property-selection button {
+  width: 180px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6296cd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.property-selection button:hover {
+  background-color: #93bdeb;
+}
+
+label {
+  display: block;
+  margin: 15px 0;
+}
+
+select,
+input[type="checkbox"] {
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.demobtn {
+  margin-top: 20px;
+  padding: 14px 24px;
+  font-size: 18px;
+  border: none;
+  background-color: #e3d94d;
+  color: rgb(24, 38, 167);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.demobtn:hover {
+  background-color: #f7f765;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(24, 38, 167);
+}
+
+/* Estate card container */
+.estate-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.estate-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Ensure pagination stays within the dmcontent container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background-color: #6296cd;
+  color: white;
+  font-size: 18px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #93bdeb;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e3e3e3;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: #6296cd;
+}
+
+/* Adjustments for ensuring dots are aligned and responsive */
+.estate-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.estate-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .dmcontent {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .estate-card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1920px) {
+  .dmcontent {
+    max-width: 800px; /* Smaller width on larger screens */
+    padding: 20px;
+  }
+}

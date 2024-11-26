@@ -1,0 +1,45 @@
+.show-all-container {
+  width: 150vh;
+  height: 6vh;
+  text-align:center;
+  /* padding: 5px; */
+  margin-top: -500px;
+  margin-left: 200px;
+  /* margin-top: 50px; */
+  position: relative;
+  
+  border-radius: 10px;
+  background-color: #e8d955;
+}
+
+.shtitle-text {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;               /* ขนาดตัวอักษรใหญ่ */
+  /* font-weight: bold;             ตัวอักษรหนา */
+  margin-top: 20px;
+  margin-bottom: 20px;           /* ช่องว่างระหว่างข้อความและปุ่ม */
+  color: rgb(24, 38, 167);       /* กำหนดสีข้อความ */
+  transform: translateY(50%);
+}
+
+
+.shview-all-button {
+  background-color: rgb(24, 38, 167);
+  color: white;
+  padding: 10px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute; /* ใช้ position absolute */
+  right: 20px; /* ทำให้ปุ่มอยู่ห่างจากขอบขวาของ container 20px */
+  top: 50%; /* จัดให้ปุ่มอยู่กลางในแนวตั้ง */
+  transform: translateY(-50%); /* เคลื่อนย้ายปุ่มขึ้นลงเพื่อให้ตรงกลางพอดี */
+}
+
+.view-all-button:hover {
+  background-color: #0056b3;
+}

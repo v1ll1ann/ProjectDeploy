@@ -1,0 +1,88 @@
+.property-detail-container {
+    /* background-color: blueviolet; */
+    padding: 20px;
+  }
+  
+  .property-content {
+    padding: 20px; /* เพิ่มระยะห่างจากขอบ */
+    background-color: #f9f9f9; /* สีพื้นหลังเพื่อให้ดูสะอาดตา */
+    border-radius: 8px; /* ขอบโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบาๆ เพิ่มความลึก */
+  }
+  
+  .property-content p {
+    margin-bottom: 12px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    color: #333; /* สีตัวอักษร */
+  }
+  
+  .property-content p strong {
+    font-weight: bold; /* ทำให้ข้อความที่สำคัญมีความหนา */
+  }
+  
+  
+  .property-footer {
+    /* background-color: aqua; */
+    margin-top: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .property-footer button {
+    padding: 10px 20px;
+    background-color:rgb(24, 38, 167);
+    border: 1px solid rgb(24, 38, 167);
+    border-radius: 10px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .property-footer button.active {
+    background-color: #007bff;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .property-footer-content {
+    background-color: rgb(244, 244, 244);
+    width: 70%;
+    margin-top: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .tab-content {
+    padding: 20px; /* เพิ่มระยะห่างจากขอบ */
+    background-color: #f9f9f9; /* สีพื้นหลังเพื่อให้ดูสะอาดตา */
+    border-radius: 8px; /* ขอบโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบาๆ เพิ่มความลึก */
+  }
+  
+  .tab-content p {
+    margin-bottom: 12px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    color: #333; /* สีตัวอักษร */
+  }
+  
+  .tab-content p strong {
+    font-weight: bold; /* ทำให้ข้อความที่สำคัญมีความหนา */
+  }
+  
+  
+  .scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .property-footer-content .tab-content {
+    display: block;
+  }
+  
+  .property-footer-content .tab-content.active {
+    display: block;
+  }
+
+  

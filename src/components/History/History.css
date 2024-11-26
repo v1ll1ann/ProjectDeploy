@@ -1,0 +1,49 @@
+.History {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../../../public/assets/town-background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.Hcontainer {
+    width: 80%;
+    max-width: 1150px;
+    height: 55vh;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(24, 38, 167);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(242, 244, 227, 0.1);
+    color: #f7fcd8;
+    margin-top: -50px;
+  }
+
+.history-title {
+  text-align: center;
+  height: 5vh;
+  white-space: nowrap;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.5;
+  /* background-color: aqua; */
+  color: #e8d955;
+  /* margin-left: px; */
+  margin-top: 5px;
+}
+  
+.Hcontent {
+  max-width: 1150px;
+  text-align: justify; /* จัดข้อความให้ชิดขอบทั้งสองด้าน */
+  border-radius: 10px;
+  line-height: 1.5; /* ปรับระยะห่างระหว่างบรรทัด */
+  height: 41vh;
+  font-size: 19px;
+  background-color: rgb(232, 237, 242);
+  color: #1e278d;
+  /* margin-left: -680px;   */
+  margin-top: 30px;
+
+}

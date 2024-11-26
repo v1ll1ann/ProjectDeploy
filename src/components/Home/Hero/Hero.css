@@ -1,0 +1,61 @@
+.hero {
+    background-image: url("../../../../../Frontend/public/assets/town-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+    justify-content: flex-start;
+
+}
+
+.container {
+    /* background-color: blue; */
+    width: 100%;
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    margin-left: 40%;
+    margin-bottom: 100%
+    
+}
+
+.hero-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 3px solid rgba(128,128,128,0.2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    margin-bottom: 70%;
+    margin-left: 0; 
+    max-width: 500px;
+    width: auto;
+}
+
+.hero-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(128,128,128,0.2);
+    border-radius: 5px;
+    color: white;
+    background-color: grey;
+    width: 350px;
+}
+
+.hero-input::placeholder {
+    font-size: 17px;
+    color: white;
+    padding-right: 60px;
+}
+
+.hero-form .btn {
+    margin-left: 10px;
+}
+
+.flex .btn {
+    width: auto;
+    padding: 10px 15px;
+}
