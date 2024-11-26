@@ -4,45 +4,50 @@ import './ShowAllResult.css';
 function ShowAllResult() {
   const [properties, setProperties] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const propertiesPerPage = 10;
+  const [totalPages, setTotalPages] = useState(0);
+  const propertiesPerPage = 10; // จำนวนรายการต่อหน้า
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Fetch all properties from backend
-    fetch('https://successful-victory-production-587d.up.railway.app/get-all-properties.php')
-      .then(response => {
+  const fetchProperties = (page) => {
+    setLoading(true);
+    fetch(`https://successful-victory-production-587d.up.railway.app/get-all-properties.php?page=${page + 1}&limit=${propertiesPerPage}`)
+      .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
       })
-      .then(data => {
-        console.log(data);
-        setProperties(data);
+      .then((data) => {
+        setProperties(data.properties || []);
+        setTotalPages(Math.ceil(data.total_count / propertiesPerPage));
+        setLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching properties:', error.message);
+        setLoading(false);
       });
-  }, []);
+  };
 
-  const totalPages = Math.ceil(properties.length / propertiesPerPage);
+  useEffect(() => {
+    fetchProperties(currentPage);
+  }, [currentPage]);
 
   const nextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
+    if (currentPage < totalPages - 1) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
   };
 
   const prevPage = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
+    if (currentPage > 0) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
   };
 
   const goToPage = (index) => {
     setCurrentPage(index);
   };
 
-  // Calculate the range of properties to display on the current page
-  const startIndex = currentPage * propertiesPerPage;
-  const displayedProperties = properties.slice(startIndex, startIndex + propertiesPerPage);
-
-  // Pagination rendering with ellipses
   const renderPagination = () => {
     const maxPagesToShow = 5;
     const pageNumbers = [];
@@ -74,7 +79,7 @@ function ShowAllResult() {
 
     return (
       <div className="pagination">
-        <button onClick={prevPage}>&lt;</button>
+        <button onClick={prevPage} disabled={currentPage === 0}>&lt;</button>
         {pageNumbers.map((page, idx) =>
           page === '...' ? (
             <span key={idx} className="pagination-ellipsis">...</span>
@@ -88,39 +93,42 @@ function ShowAllResult() {
             </button>
           )
         )}
-        <button onClick={nextPage}>&gt;</button>
+        <button onClick={nextPage} disabled={currentPage === totalPages - 1}>&gt;</button>
       </div>
     );
   };
 
   return (
     <div className="show-all-result-container">
-      {displayedProperties.length > 0 ? (
-        <div className="property-list">
-          {displayedProperties.map((property, index) => {
-            const formattedPrice = new Intl.NumberFormat('en-US').format(property.PRICE);
-            return (
-              <div
-                key={index}
-                className="property-card"
-                onClick={() => window.location.href = `/property/${property.PR_ID}`}
-              >
-                <img src={`data:image/jpeg;base64,${property.IMAGE}`} alt={`Property ${index}`} className="property-card-image" />
-                <div className="property-card-info">
-                  <p className="property-card-price">ราคา: {formattedPrice} บาท</p>
-                  <h2 className="property-card-name">{property.NAME}</h2>
-                  <p className="estate-card-location-border">{property.DISTRICT}, {property.SUB_DISTRICT}</p>
-                  <p className="property-card-size">ขนาด: {property.SIZE} </p>
+      {loading ? (
+        <p>Loading...</p>
+      ) : properties.length > 0 ? (
+        <>
+          <div className="property-list">
+            {properties.map((property, index) => {
+              const formattedPrice = new Intl.NumberFormat('en-US').format(property.PRICE);
+              return (
+                <div
+                  key={index}
+                  className="property-card"
+                  onClick={() => window.location.href = `/property/${property.PR_ID}`}
+                >
+                  <img src={`data:image/jpeg;base64,${property.IMAGE}`} alt={`Property ${index}`} className="property-card-image" />
+                  <div className="property-card-info">
+                    <p className="property-card-price">ราคา: {formattedPrice} บาท</p>
+                    <h2 className="property-card-name">{property.NAME}</h2>
+                    <p className="estate-card-location-border">{property.DISTRICT}, {property.SUB_DISTRICT}</p>
+                    <p className="property-card-size">ขนาด: {property.SIZE} </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+          {renderPagination()}
+        </>
       ) : (
-        <p>Loading.</p>
+        <p>No properties found.</p>
       )}
-
-      {renderPagination()}
     </div>
   );
 }
