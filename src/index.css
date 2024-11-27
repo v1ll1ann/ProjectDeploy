@@ -10,7 +10,7 @@
     align-items: center;
     height: 100vh;
     /* background: url(./assets/housebackground.jpg) no-repeat; */
-    background: url(./assets/town-background.jpg) no-repeat;
+    background: url(../public/assets/town-background.jpg) no-repeat;
     /* background: url() no-repeat;  */
     background-size: cover;
     background-position: center;
@@ -22,7 +22,7 @@
     align-items: center;
     height: 100vh;
     /* background: url(./assets/housebackground.jpg) no-repeat; */
-    background: url(./assets/town-background.jpg) no-repeat;
+    background: url(../public/assets/town-background.jpg) no-repeat;
     /* background: url() no-repeat;  */
     background-size: cover;
     background-position: center;
@@ -34,7 +34,7 @@
     align-items: center;
     height: 100vh;
     /* background: url(./assets/housebackground.jpg) no-repeat; */
-    background: url(./assets/town-background.jpg) no-repeat;
+    background: url(../public/assets/town-background.jpg) no-repeat;
     /* background: url() no-repeat;  */
     background-size: cover;
     background-position: center;
@@ -46,7 +46,7 @@
     align-items: center;
     height: 100vh;
     /* background: url(./assets/housebackground.jpg) no-repeat; */
-    background: url(./assets/town-background.jpg) no-repeat;
+    background: url(../public/assets/town-background.jpg) no-repeat;
     /* background: url() no-repeat;  */
     background-size: cover;
     background-position: center;
