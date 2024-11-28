@@ -78,7 +78,7 @@ function ShowAllResult() {
     }
 
     return (
-      <div className="Demographic">
+
       <div className="pagination">
         <button onClick={prevPage} disabled={currentPage === 0}>&lt;</button>
         {pageNumbers.map((page, idx) =>
@@ -96,11 +96,12 @@ function ShowAllResult() {
         )}
         <button onClick={nextPage} disabled={currentPage === totalPages - 1}>&gt;</button>
       </div>
-      </div>
+
     );
   };
 
   return (
+    <div className="Demographic">
     <div className="show-all-result-container">
       {loading ? (
         <p>Loading...</p>
@@ -131,6 +132,7 @@ function ShowAllResult() {
       ) : (
         <p>No properties found.</p>
       )}
+    </div>
     </div>
   );
 }
