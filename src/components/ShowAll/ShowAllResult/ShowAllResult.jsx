@@ -78,6 +78,7 @@ function ShowAllResult() {
     }
 
     return (
+      <div className="Demographic">
       <div className="pagination">
         <button onClick={prevPage} disabled={currentPage === 0}>&lt;</button>
         {pageNumbers.map((page, idx) =>
@@ -94,6 +95,7 @@ function ShowAllResult() {
           )
         )}
         <button onClick={nextPage} disabled={currentPage === totalPages - 1}>&gt;</button>
+      </div>
       </div>
     );
   };
