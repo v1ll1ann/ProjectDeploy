@@ -16,7 +16,7 @@ function PropertyDetail({ user }) {
     // Check if the user is logged in
     if (!user) {
       // If not logged in, redirect to the login page
-      navigate('/');
+      navigate('/login');
       return;
     }
 
